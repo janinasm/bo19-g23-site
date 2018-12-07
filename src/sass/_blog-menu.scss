@@ -1,0 +1,48 @@
+.blog-menu {
+    grid-column: 3 / 4;
+    grid-row: 2;
+    background: $primary-color--dark;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    grid-template-rows: repeat(2, 1fr);
+    &__item {
+        background: $primary-color--light;
+        transition: background .1s ease-in-out;
+        &:hover,
+        &:active {
+            background: $primary-color--dark;
+        }
+        display: grid;
+        align-items: center;
+        align-content: center;
+        justify-items: center;
+        &>div {
+            width: 80%;
+            height: 100%;
+            &>img {
+                max-width: 100%;
+                object-fit: scale-down;
+            }
+        }
+    }
+    &__overlay {
+        grid-column: 3 / 4;
+        grid-row: 2;
+        z-index: 10;
+        background: gray;
+
+        display: grid;
+        align-content: center;
+        justify-content: center;
+        
+        @media only screen and (max-width: $bp-large) {
+            grid-column: 1;
+            grid-row: 3;
+        }
+    }
+
+    @media only screen and (max-width: $bp-large) {
+        grid-column: 1;
+        grid-row: 3;
+    }
+}

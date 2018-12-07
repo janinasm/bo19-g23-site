@@ -1,0 +1,15 @@
+.details {
+    grid-column: 3 / -1;
+    grid-row: 1;
+    background: #ffffee;
+    display: grid;
+    padding: 7rem 8vw;
+    grid-gap: 2rem;
+    align-content: start;
+    &__headline {}
+
+    @media only screen and (max-width: $bp-large) {
+        grid-column: 1;
+        grid-row: 2;
+    }
+}
